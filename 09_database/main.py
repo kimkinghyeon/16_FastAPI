@@ -68,7 +68,7 @@ async def find_student_by_id(student_id:int,db:Session =Depends(get_db)):
 # student get - all
 @app.get('/students',response_model=list[schemas.StudentResponse])
 async def find_all_students(db: Session = Depends(get_db)):
-    all_students = student_crud.get_all_students(db)
+    all_students = student_crud.get_all_student(db)
     return all_students
 
 # student by - id put
