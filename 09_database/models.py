@@ -13,3 +13,12 @@ class Teacher(Base):
     nickname = Column(String(50))
     is_active = Column(Boolean,default=True)
     description = Column(Text)
+    
+class Student(Base):
+    __tablename__ = 'student'
+    
+    id = Column(Integer,primary_key=True)
+    name = Column(String(50))
+    nickname = Column(String(50))
+    launch_menu = Column(String(100))
+    description = Column(Text)
